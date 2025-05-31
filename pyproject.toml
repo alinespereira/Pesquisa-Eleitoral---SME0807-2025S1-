@@ -1,18 +1,17 @@
 [project]
-name = "trabalho"
+name = "pesquisa-eleitoral"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "Aline", email = "line.asramos@gmail.com" }
+]
 requires-python = ">=3.12"
-dependencies = [
-    "ipykernel>=6.29.5",
-    "matplotlib>=3.10.3",
-    "pandas>=2.2.3",
-    "seaborn>=0.13.2",
-]
+dependencies = []
 
-[dependency-groups]
-dev = [
-    "mypy>=1.16.0",
-    "ruff>=0.11.12",
-]
+[project.scripts]
+pesquisa-eleitoral = "pesquisa_eleitoral:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
