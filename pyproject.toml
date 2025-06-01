@@ -7,7 +7,13 @@ authors = [
     { name = "Aline", email = "line.asramos@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.10.3",
+    "numpy>=2.2.6",
+    "pandas>=2.2.3",
+    "scipy>=1.15.3",
+    "seaborn>=0.13.2",
+]
 
 [project.scripts]
 pesquisa-eleitoral = "pesquisa_eleitoral:main"
@@ -15,3 +21,12 @@ pesquisa-eleitoral = "pesquisa_eleitoral:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "scipy-stubs>=1.15.3.0",
+]
+
+[tool.ruff]
+line-length = 79
